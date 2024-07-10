@@ -11,14 +11,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Host from "./Host.jsx";
 import AddManually from "./AddManually.jsx";
 import Pdf from "./Pdf.jsx";
-import Layout from "./Components/Layout";
-import Dashboard from "./Pages/Dashboard";
-import Settings from "./Pages/Settingcard";
-import Upgrade from "./Pages/Upgrade";
+import Layout from "./Components/Layout.jsx";
+import Dashboard from "./Pages/Dashboard.jsx";
+import Settings from "./Pages/Settingcard.jsx";
+import Upgrade from "./Pages/Upgrade.jsx";
 import Home from "./Pages/Home.jsx";
-import Class from "./Pages/Class";
-import Login from "./Pages/Login";
-import Register from "./Pages/Register";
+import Class from "./Pages/Class.jsx";
+import Login from "./Pages/Login.jsx";
+import Register from "./Pages/Register.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
