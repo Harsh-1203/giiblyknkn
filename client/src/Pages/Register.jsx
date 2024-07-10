@@ -46,6 +46,7 @@ function Register() {
               <button
                 type="submit"
                 className="bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600 transition duration-300"
+                onClick={() => (window.location.href = "/pages/Login")}
               >
                 Register
               </button>

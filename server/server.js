@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "*",
     credentials: true, // so that we can get cookies
   })
 );
@@ -66,16 +66,13 @@ app.get("/pdf", async (req, res) => {
 
     doc = new PDFDocument();
 
-    doc.pipe(
-      fs.createWriteStream("../Gibbly/public/output.pdf")
-    ); // would have to change the path
+    doc.pipe(fs.createWriteStream("../client/public/output.pdf")); // would have to change the path
 
     doc.fontSize(35).text(title, {
       align: "center",
       underline: true,
     });
 
-  
     let yPosition = 150;
 
     questions.forEach(({ question, mcq }) => {
@@ -84,14 +81,14 @@ app.get("/pdf", async (req, res) => {
 
       mcq.forEach((ele, index) => {
         doc.fontSize(15).text(`${index + 1}. ${ele}`, 70, yPosition);
-        yPosition += 20; 
+        yPosition += 20;
       });
 
-      yPosition += 20; 
+      yPosition += 20;
     });
 
     doc.end();
-    res.json({success:true})
+    res.json({ success: true });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

@@ -24,8 +24,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <>
     <BrowserRouter>
       <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/home" element={<Dashboard />} />
+        <Route path="/" element={<Home />} />
         <Route path="/pages/Settingcard" element={<Settings />} />
         <Route path="/pages/Upgrade" element={<Upgrade />} />
         <Route path="/pages/Class" element={<Class />} />

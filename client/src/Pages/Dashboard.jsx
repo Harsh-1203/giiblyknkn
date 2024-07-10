@@ -137,7 +137,9 @@ const Dashboard = () => {
         } md:translate-x-0 md:relative md:w-40`}
       >
         <div className="flex justify-between items-center mb-4">
-          <img src={Logo} alt="Gibbly Logo" className="h-16" />
+          <button onClick={() => (window.location.href = "/")}>
+            <img src={Logo} alt="Gibbly Logo" className="h-16" />
+          </button>
           <button
             onClick={() => setIsSidebarOpen(false)}
             className="md:hidden p-2 text-gray-600 hover:text-gray-900"

@@ -67,7 +67,7 @@ const Navbar = () => {
             Contact Us
           </button>
           <a
-            href="/"
+            href="/home"
             className="text-black no-underline py-2 px-4 mx-1 hover:bg-gray-200"
           >
             Go to Dashboard

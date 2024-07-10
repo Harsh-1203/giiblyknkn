@@ -73,9 +73,9 @@
 //           <h5 className="text-lg">{t.language}</h5>
 //           <p className="text-sm text-gray-900">{t.languageDesc}</p>
 //           <div className="language-box">
-//             <select 
-//               value={language} 
-//               onChange={handleLanguageChange} 
+//             <select
+//               value={language}
+//               onChange={handleLanguageChange}
 //               className="w-52 border border-gray-200 shadow-md p-2 rounded"
 //             >
 //               <option value="EN" className="text-purple-700">English</option>
@@ -127,56 +127,66 @@
 
 // export default Settings;
 
-
-
-
-
-
-
-
-
-import React from 'react';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import XIcon from '@mui/icons-material/X';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailIcon from '@mui/icons-material/Email';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ForumIcon from '@mui/icons-material/Forum';
-import SlowMotionVideoIcon from '@mui/icons-material/SlowMotionVideo';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import CreateIcon from '@mui/icons-material/Create';
-import ExploreIcon from '@mui/icons-material/Explore';
-import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
-import SchoolIcon from '@mui/icons-material/School';
-import SettingsIcon from '@mui/icons-material/Settings';
-import UpgradeIcon from '@mui/icons-material/Upgrade';
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
-import Logo from '../assets/logo.png';
+import React from "react";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import XIcon from "@mui/icons-material/X";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import ForumIcon from "@mui/icons-material/Forum";
+import SlowMotionVideoIcon from "@mui/icons-material/SlowMotionVideo";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import CreateIcon from "@mui/icons-material/Create";
+import ExploreIcon from "@mui/icons-material/Explore";
+import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
+import SchoolIcon from "@mui/icons-material/School";
+import SettingsIcon from "@mui/icons-material/Settings";
+import UpgradeIcon from "@mui/icons-material/Upgrade";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import Logo from "../assets/logo.png";
 
 const Settings = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
-    <div style={{position:"relative", top:"0px" ,left:"10px"}} className='grid grid-cols-10 gap-4'>
-    <div className='col-span-1 md:hidden'>
-      <button onClick={() => setIsSidebarOpen(true)} className="p-2 text-gray-600 hover:text-gray-900">
-        <MenuIcon fontSize="large" />
-      </button>
-    </div>
-    <div className={`fixed inset-y-0 left-0 w-45 bg-white shadow-lg p-4 overflow-y-auto transition-transform transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:relative md:w-40`}>
-      <div className="flex justify-between items-center mb-4">
-        <img src={Logo} alt="Gibbly Logo" className="h-16" />
-        <button onClick={() => setIsSidebarOpen(false)} className="md:hidden p-2 text-gray-600 hover:text-gray-900">
-          <CloseIcon fontSize="large" />
+    <div
+      style={{ position: "relative", top: "0px", left: "10px" }}
+      className="grid grid-cols-10 gap-4"
+    >
+      <div className="col-span-1 md:hidden">
+        <button
+          onClick={() => setIsSidebarOpen(true)}
+          className="p-2 text-gray-600 hover:text-gray-900"
+        >
+          <MenuIcon fontSize="large" />
         </button>
       </div>
-      <nav>
-      <ul>
+      <div
+        className={`fixed inset-y-0 left-0 w-45 bg-white shadow-lg p-4 overflow-y-auto transition-transform transform ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        } md:translate-x-0 md:relative md:w-40`}
+      >
+        <div className="flex justify-between items-center mb-4">
+          <button onClick={() => (window.location.href = "/")}>
+            <img src={Logo} alt="Gibbly Logo" className="h-16" />
+          </button>
+          <button
+            onClick={() => setIsSidebarOpen(false)}
+            className="md:hidden p-2 text-gray-600 hover:text-gray-900"
+          >
+            <CloseIcon fontSize="large" />
+          </button>
+        </div>
+        <nav>
+          <ul>
             <li className="mb-4">
               <button className="w-full text-left h-30 p-2 rounded hover:bg-orange-300">
-                <div onClick={()=>window.location.href="/create"}  className="flex flex-col items-center">
+                <div
+                  onClick={() => (window.location.href = "/create")}
+                  className="flex flex-col items-center"
+                >
                   <CreateIcon />
                   <p className="text-orange-600 font-bold">Create</p>
                 </div>
@@ -184,7 +194,10 @@ const Settings = () => {
             </li>
             <li className="mb-4">
               <button className="w-full text-left h-30 p-2 rounded hover:bg-orange-300">
-                <div onClick={()=>window.location.href="/loader"} className="flex flex-col items-center">
+                <div
+                  onClick={() => (window.location.href = "/loader")}
+                  className="flex flex-col items-center"
+                >
                   <ExploreIcon />
                   <p className="text-orange-600">Discover</p>
                 </div>
@@ -192,7 +205,10 @@ const Settings = () => {
             </li>
             <li className="mb-4">
               <button className="w-full text-left h-30 p-2 rounded hover:bg-orange-300">
-                <div onClick={()=>window.location.href="/loader"} className="flex flex-col items-center">
+                <div
+                  onClick={() => (window.location.href = "/loader")}
+                  className="flex flex-col items-center"
+                >
                   <LibraryBooksIcon />
                   <p className="text-orange-600">My Library</p>
                 </div>
@@ -200,7 +216,10 @@ const Settings = () => {
             </li>
             <li className="mb-4">
               <button className="w-full text-left h-30 p-2 rounded hover:bg-orange-300">
-                <div onClick={()=>window.location.href="/pages/Class"} className="flex flex-col items-center">
+                <div
+                  onClick={() => (window.location.href = "/pages/Class")}
+                  className="flex flex-col items-center"
+                >
                   <SchoolIcon />
                   <p className="text-orange-600">Classes</p>
                 </div>
@@ -208,7 +227,10 @@ const Settings = () => {
             </li>
             <li className="mb-4">
               <button className="w-full text-left h-30 p-2 rounded hover:bg-orange-300">
-                <div onClick={()=>window.location.href="/pages/Settingcard"}  className="flex flex-col items-center">
+                <div
+                  onClick={() => (window.location.href = "/pages/Settingcard")}
+                  className="flex flex-col items-center"
+                >
                   <SettingsIcon />
                   <p className="text-orange-600">Settings</p>
                 </div>
@@ -216,100 +238,140 @@ const Settings = () => {
             </li>
             <li className="mb-4">
               <button className="w-full text-left h-30 p-2 rounded hover:bg-orange-300">
-                <div onClick={()=>window.location.href="/pages/Upgrade"} className="flex flex-col items-center">
+                <div
+                  onClick={() => (window.location.href = "/pages/Upgrade")}
+                  className="flex flex-col items-center"
+                >
                   <UpgradeIcon />
                   <p className="text-yellow-600 font-bold">Upgrade</p>
                 </div>
               </button>
             </li>
           </ul>
-      </nav>
-    </div>
-    <div className='col-span-1'></div>
-    <div className="p-6 bg-gray-100 col-span-8">
-      <div className="max-w-4xl mx-auto grid grid-cols-1 gap-6 lg:grid-cols-3">
-        <div className="lg:col-span-2 bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-bold mb-4">Account Information</h2>
-          <div className="space-y-4">
-            <div className="flex items-center">
-              <span className="w-1/3 font-medium">Username:</span>
-              <span className="w-2/3">user20681422015373</span>
-            </div>
-            <div className="flex items-center">
-              <span className="w-1/3 font-medium">Role:</span>
-              <select className="w-2/3 p-2 border rounded">
-                <option>Teacher</option>
-              </select>
-            </div>
-            <div className="flex items-center">
-              <span className="w-1/3 font-medium">Output Language:</span>
-              <select className="w-2/3 p-2 border rounded">
-                <option>English</option>
-              </select>
-            </div>
-            <div className="flex items-center">
-              <span className="w-1/3 font-medium">Preferred Model:</span>
-              <div className="w-2/3 flex items-center">
-                <span className="mr-2 bg-gray-200 p-2 rounded">AI Model:</span>
-                <select className="p-2 border rounded">
-                  <option>⚡ Faster</option>
+        </nav>
+      </div>
+      <div className="col-span-1"></div>
+      <div className="p-6 bg-gray-100 col-span-8">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 gap-6 lg:grid-cols-3">
+          <div className="lg:col-span-2 bg-white rounded-lg shadow-md p-6">
+            <h2 className="text-xl font-bold mb-4">Account Information</h2>
+            <div className="space-y-4">
+              <div className="flex items-center">
+                <span className="w-1/3 font-medium">Username:</span>
+                <span className="w-2/3">user20681422015373</span>
+              </div>
+              <div className="flex items-center">
+                <span className="w-1/3 font-medium">Role:</span>
+                <select className="w-2/3 p-2 border rounded">
+                  <option>Teacher</option>
                 </select>
               </div>
-            </div>
-            <div className="flex items-center">
-              <span className="w-1/3 font-medium">Date Joined:</span>
-              <span className="w-2/3">June 27, 2024</span>
-            </div>
-            <div className="flex items-center">
-              <span className="w-1/3 font-medium">Plan:</span>
-              <div className="w-2/3 flex items-center">
-                <span>Starter</span>
-                <button className="ml-4 bg-blue-500 text-white px-3 py-1 rounded">Upgrade</button>
+              <div className="flex items-center">
+                <span className="w-1/3 font-medium">Output Language:</span>
+                <select className="w-2/3 p-2 border rounded">
+                  <option>English</option>
+                </select>
               </div>
-            </div>
-            <div className="flex items-center">
-              <span className="w-1/3 font-medium">Tokens:</span>
-              <div className="w-2/3 flex items-center">
-                <span className="mr-2">Base: 10,000</span>
-                <span>Bonus: 0</span>
+              <div className="flex items-center">
+                <span className="w-1/3 font-medium">Preferred Model:</span>
+                <div className="w-2/3 flex items-center">
+                  <span className="mr-2 bg-gray-200 p-2 rounded">
+                    AI Model:
+                  </span>
+                  <select className="p-2 border rounded">
+                    <option>⚡ Faster</option>
+                  </select>
+                </div>
               </div>
+              <div className="flex items-center">
+                <span className="w-1/3 font-medium">Date Joined:</span>
+                <span className="w-2/3">June 27, 2024</span>
+              </div>
+              <div className="flex items-center">
+                <span className="w-1/3 font-medium">Plan:</span>
+                <div className="w-2/3 flex items-center">
+                  <span>Starter</span>
+                  <button className="ml-4 bg-blue-500 text-white px-3 py-1 rounded">
+                    Upgrade
+                  </button>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <span className="w-1/3 font-medium">Tokens:</span>
+                <div className="w-2/3 flex items-center">
+                  <span className="mr-2">Base: 10,000</span>
+                  <span>Bonus: 0</span>
+                </div>
+              </div>
+              <button className="mt-6 bg-red-500 text-white px-4 py-2 rounded">
+                Sign Out
+              </button>
             </div>
-            <button className="mt-6 bg-red-500 text-white px-4 py-2 rounded">Sign Out</button>
           </div>
-        </div>
 
-        <div className="space-y-6">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-xl font-bold mb-4">Privacy & Terms</h2>
-            <ul className="space-y-2">
-              <li><a  href="#" className="text-blue-500" >Privacy Policy</a></li>
-              <li><a href="#" className="text-blue-500">Terms of Service</a></li>
-            </ul>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-xl font-bold mb-4">Support</h2>
-            <ul className="space-y-2">
-              <li><a href="#" className=" hover:text-sky-700" ><EmailIcon></EmailIcon> Contact Us</a></li>
-              <li><a href="#" className=" hover:text-sky-700" ><SlowMotionVideoIcon></SlowMotionVideoIcon> Training Videos</a></li>
-              <li><a href="#" className=" hover:text-sky-700" ><ForumIcon></ForumIcon> Leave Feedback</a></li>
-              <li><a href="#" className=" hover:text-sky-700" ><FavoriteIcon></FavoriteIcon> Become a Gibbly Insider</a></li>
-            </ul>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-xl font-bold mb-4">Socials</h2>
-            <div className="flex space-x-4">
-              <a href="#" ><XIcon></XIcon></a>
-              <a href="#" ><FacebookIcon></FacebookIcon></a>
-              <a href="#" ><InstagramIcon></InstagramIcon></a>
-              
-              
-              <a href="#" ><LinkedInIcon></LinkedInIcon></a>
+          <div className="space-y-6">
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-xl font-bold mb-4">Privacy & Terms</h2>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-blue-500">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-blue-500">
+                    Terms of Service
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-xl font-bold mb-4">Support</h2>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className=" hover:text-sky-700">
+                    <EmailIcon></EmailIcon> Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className=" hover:text-sky-700">
+                    <SlowMotionVideoIcon></SlowMotionVideoIcon> Training Videos
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className=" hover:text-sky-700">
+                    <ForumIcon></ForumIcon> Leave Feedback
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className=" hover:text-sky-700">
+                    <FavoriteIcon></FavoriteIcon> Become a Gibbly Insider
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-xl font-bold mb-4">Socials</h2>
+              <div className="flex space-x-4">
+                <a href="https://x.com/GibblyCo">
+                  <XIcon></XIcon>
+                </a>
+                <a href="https://www.facebook.com/gibbly.co/">
+                  <FacebookIcon></FacebookIcon>
+                </a>
+                <a href="https://www.instagram.com/Gibbly.co/">
+                  <InstagramIcon></InstagramIcon>
+                </a>
+
+                <a href="https://www.linkedin.com/company/gibbly/">
+                  <LinkedInIcon></LinkedInIcon>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   );
 };
 
