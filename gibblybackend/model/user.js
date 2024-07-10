@@ -2,7 +2,9 @@ const mongoose = require("mongoose");
 const { type } = require("os");
 
 mongoose
-  .connect("mongodb://localhost:27017/gibblybackend")
+  .connect(
+    "mongodb+srv://jainharsh0312:mDXiOo8EQep5fGQP@cluster0.trnj8br.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+  )
   .then(() => {
     console.log("Database is connected ");
   })
@@ -17,21 +19,18 @@ const userschema = new mongoose.Schema({
   },
   title: {
     type: String,
-    
   },
   description: {
     type: String,
-    
   },
   questions: [
     {
       question: {
         type: String,
         required: true,
-        
       },
-      mcq:{
-          type:[String]
+      mcq: {
+        type: [String],
       },
       answer: [
         {
@@ -39,7 +38,6 @@ const userschema = new mongoose.Schema({
           required: true,
         },
       ],
-     
     },
   ],
 });
